@@ -44,3 +44,20 @@ def turtle_power(turtles):
 # Given a list of numbers, set the value of the data stored at index 1 to 88.
 
 numbers = [1, 4, 6, 8, 0]
+numbers[1] = 88
+
+# Given a list lst of unknown length, return its length.
+
+def get_length(lst):
+    return len(lst)
+
+# Input the following key-value pairs for person4.
+# Give first_name the value "Daenerys".
+# Give last_name the value "Targaryen".
+# Give email the value "dragonlady@gmail.com".
+
+person4 = {
+    "first_name" : "Daenerys",
+    "last_name" : "Targaryen",
+    "email" : "dragonlady@gmail.com",
+}
