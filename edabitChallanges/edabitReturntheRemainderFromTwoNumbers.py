@@ -14,4 +14,4 @@ If you get stuck on a challenge, find help in the Resources tab.
 """
 
 def remainder(x, y):
-    
+    return (int(x)%y)
