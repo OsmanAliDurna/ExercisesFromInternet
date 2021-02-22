@@ -11,5 +11,5 @@ If you're really stuck, unlock solutions in the Solutions tab.
 """
 
 function convert(minutes) {
-	return minutes*5
+	return minutes*60
 }
