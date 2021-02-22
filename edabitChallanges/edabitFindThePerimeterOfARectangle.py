@@ -10,6 +10,5 @@ If you're stuck, find help in the Resources tab.
 If you're really stuck, find solutions in the Solutions tab.
 """
 
-function findPerimeter(length, width) {
-	return (length+width)*2
-}
+def find_perimeter(length, width):
+    	return (length+width)*2

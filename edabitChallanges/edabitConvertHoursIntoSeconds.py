@@ -9,6 +9,5 @@ Notes
 Don't forget to return your answer.
 """
 
-function howManySeconds(hours) {
+def howManySeconds(hours):
 	return hours*3600	 
-}
