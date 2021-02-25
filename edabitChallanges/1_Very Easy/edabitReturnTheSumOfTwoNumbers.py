@@ -10,6 +10,5 @@ If you get stuck on a challenge, find help in the Resources tab.
 If you're really stuck, unlock solutions in the Solutions tab.
 """
 
-function addition(a, b) {
+function addition(a, b):
 	return a+b
-}
