@@ -1,6 +1,4 @@
-status = True
-
-while status:
+while True:
 
     sentence = input('Send me a sentence and I check it for you : ')
 
@@ -17,7 +15,7 @@ while status:
         
         i += 1
 
-    print('Length of longest word in your sentece is : ', longest, ', and the word is : ', longestWord)
+    print('Length of longest word in your sentece is : ', longest, '\nAnd the word is : ', longestWord)
 
     again = input('Do you want to try again ? (Yes or No) : ').title().replace(" ","")
 
@@ -26,7 +24,6 @@ while status:
 
     elif again == 'No':
         print("Bye then...")
-        status = False
-
+        break
     else:
         print('Funny it is not a Yes or No but I accept that as a big YYYYEEEESSS')
