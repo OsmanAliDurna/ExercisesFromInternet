@@ -60,16 +60,24 @@ and the second string contains the ordered characters from S's odd indices (ak).
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
 T = int(input())
-for times in range(T):
+
+stringList = []
+
+for i in range(T):
     strings = input()
-    if (len(strings) >= 2) and (len(strings) <= 10000):
-        for index in range(len(strings)):
+    stringList.append(strings)
+
+stringList = stringList.reverse()
+
+for j in range(T):    
+    if (len(stringList[j-1]) >= 2) and (len(stringList[j-1]) <= 10000):
+        for index in range(len(stringList[j-1])):
             if not (index % 2):
-                print(strings[index], end="")
+                print(stringList[j-1][index], end="")
                 index += 1
-        print(" ")
-        for index2 in range(len(strings)):
+        for index2 in range(len(stringList[j-1])):
             if (index2 % 2):
-                print(strings[index2], end="")
+                print(stringList[j-1][index2], end="")
                 index2 += 1
+        print("\n")
         
