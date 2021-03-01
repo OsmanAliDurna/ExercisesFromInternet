@@ -1,58 +1,73 @@
 """
 Objective
-Today, we're discussing data types. Check out the Tutorial tab for learning materials and an instructional video!
+In this challenge, you will work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video.
 
 Task
-Complete the code in the editor below. The variables i, d, and s are already declared and initialized for you. You must:
-1. Declare 3 variables: one of type int, one of type double, and one of type String.
-2. Read 3 lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your 3 variables.
-3. Use the + operator to perform the following operations:
-    1. Print the sum of i plus your int variable on a new line.
-    2. Print the sum of d plus your double variable to a scale of one decimal place on a new line.
-    3. Concatenate s with the string you read as input and print the result on a new line.
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip),
+and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.
+Round the result to the nearest integer.
 
-Note: If you are using a language that doesn't support using + for string concatenation (e.g.: C), you can just print one variable immediately following the other on the same line. The string provided in your editor must be printed first, immediately followed by the string you read as input.
+Example
+mealcost = 100
+tippercent = 15
+taxpercent = 8
+
+A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value 123 and return from the function.
+
+Function Description
+Complete the solve function in the editor below.
+solve has the following parameters:
+    int meal_cost: the cost of food before tip and tax
+    int tip_percent: the tip percentage
+    int tax_percent: the tax percentage
+Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
+Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
 
 Input Format
-The first line contains an integer that you must sum with i.
-The second line contains a double that you must sum with d.
-The third line contains a string that you must concatenate with s.
-
-Output Format
-Print the sum of both integers on the first line, the sum of both doubles (scaled to 1 decimal place) on the second line, and then the two concatenated strings on the third line.
+There are 3 lines of numeric input:
+The first line has a double, mealcost (the cost of the meal before tax and tip).
+The second line has an integer, tippercent (the percentage of mealcost being added as tip).
+The third line has an integer, taxpercent (the percentage of mealcost being added as tax).
 
 Sample Input
-12
-4.0
-is the best place to learn and practice coding!
+12.00
+20
+8
 
 Sample Output
-16
-8.0
-HackerRank is the best place to learn and practice coding!
+15
 
 Explanation
-When we sum the integers 4 and 12, we get the integer 16.
-When we sum the floating-point numbers 4.0 and 4.0, we get 8.0.
-When we concatenate HackerRank with is the best place to learn and practice coding!, we get HackerRank is the best place to learn and practice coding!.
-You will not pass this challenge if you attempt to assign the Sample Case values to your variables instead of following the instructions above and reading input from stdin.
+Given:
+mealcost = 12
+tippercent = 20
+taxpercent = 8
+Calculations:
+tip = 12 and (12//100) * 20 = 2.4
+tax = 8 and (8//100) * 20 = 0.96
+totalcost = mealcost + tip + tax = 12 + 2.4 + 0.96 = 15.36
+round(totalcost) = 15
+We round totalcost to the nearest integer and print the result, 15.
 """
 
-i = 4
-d = 4.0
-s = 'HackerRank '
-# Declare second integer, double, and String variables.
+#!/bin/python3
 
-# Read and save an integer, double, and String to your variables.
+import math
+import os
+import random
+import re
+import sys
 
-# Print the sum of both integer variables on a new line.
+# Complete the solve function below.
+def solve(meal_cost, tip_percent, tax_percent):
 
-# Print the sum of the double variables on a new line.
+    print(round((meal_cost * ( 100 + tip_percent + tax_percent )) / 100 ))
 
-# Concatenate and print the String variables on a new line
-# The 's' variable above should be printed first.
+if __name__ == '__main__':
+    meal_cost = float(input())
 
-inputInteger = int(input())
-inputFloat = float(input())
-inputString = (input())
-print((i+inputInteger), (d+inputFloat), (s+inputString), sep="\n")
+    tip_percent = int(input())
+
+    tax_percent = int(input())
+
+    solve(meal_cost, tip_percent, tax_percent)
