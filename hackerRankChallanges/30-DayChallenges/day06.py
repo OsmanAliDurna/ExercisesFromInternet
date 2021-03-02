@@ -67,17 +67,13 @@ for i in range(T):
     strings = input()
     stringList.append(strings)
 
-stringList = stringList.reverse()
-
-for j in range(T):    
-    if (len(stringList[j-1]) >= 2) and (len(stringList[j-1]) <= 10000):
-        for index in range(len(stringList[j-1])):
+for j in range(T):
+    odds = []
+    evens = []
+    if len(stringList[j]) >= 2 and len(stringList[j]) <= 10000:
+        for index in range(len(stringList[j])):
             if not (index % 2):
-                print(stringList[j-1][index], end="")
-                index += 1
-        for index2 in range(len(stringList[j-1])):
-            if (index2 % 2):
-                print(stringList[j-1][index2], end="")
-                index2 += 1
-        print("\n")
-        
+                odds.append(stringList[j][index])
+            else:                
+                evens.append(stringList[j][index])
+        print(*odds, " ", *evens, sep = "")
