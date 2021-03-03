@@ -55,19 +55,16 @@ Harry is one of the keys in our dictionary, so we print harry=12299933.
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
-if __name__ == '__main__':
-    n = int(input())
+n = int(input())
+  
+nameAndNumber = dict(input().split() for i in range(n))
+
+nameOK = list(input() for i in range(n))
+
+for i in range(n):    
     
-    nameAndNumber = dict(input().split() for i in range(n))
-
-    nameOK = list(input() for i in range(n))
-
-sameName = list(nameAndNumber.keys())
-numberOK = list(nameAndNumber.values())
-
-
-for i in range(n):
-    if sameName[i] == nameOK[i]:
-        print("{}={}".format(nameOK[i],numberOK[i]))
-    else:
+    if nameOK[i] in nameAndNumber.keys():
+        print("{}={}".format(nameOK[i], nameAndNumber[nameOK[i]]))
+        
+    else:        
         print("Not found")
