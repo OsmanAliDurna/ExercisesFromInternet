@@ -12,3 +12,8 @@ Don't overthink this challenge; it's not supposed to be hard.
 
 def cubes(a):
 	return a ** 3
+
+
+x = int(input("sayi giriniz : "))
+
+print(x**3)
