@@ -53,7 +53,7 @@ Query 2: harry
 Harry is one of the keys in our dictionary, so we print harry=12299933.
 """
 
-# Enter your code here. Read input from STDIN. Print output to STDOUT
+#!/bin/python3
 
 n = int(input())
 
