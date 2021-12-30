@@ -56,17 +56,15 @@ Harry is one of the keys in our dictionary, so we print harry=12299933.
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
 n = int(input())
-  
+
 nameAndNumber = dict(input().split() for i in range(n))
 
-nameOK = list(input() for i in range(n))
-
-for i in range(n):    
-    
-    if nameOK[i] in nameAndNumber.keys():
-        print("{}={}".format(nameOK[i], nameAndNumber[nameOK[i]]))
-        
-    else:        
-        print("Not found")
-
-print("Yea")
+while 1:
+    try:
+        searchedName = input()
+        if searchedName in nameAndNumber:
+            print(str(searchedName) + "=" + str(nameAndNumber[searchedName]))
+        else:
+            print("Not found")
+    except:
+        break
