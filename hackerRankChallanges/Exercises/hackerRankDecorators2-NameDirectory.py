@@ -49,6 +49,7 @@ def person_lister(f):
                 if(sorted(sortablePeople)[i] == people[j][2]):
                     sortedPeople.append(f(people[j]))
         return sortedPeople
+        #return map(f, sorted(people, key = lambda x: int(x[2])))
     return inner
 
 
