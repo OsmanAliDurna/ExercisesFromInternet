@@ -54,7 +54,3 @@ if __name__ == '__main__':
         name = input()
         score = float(input())
         scores.append([name, score])
-
-second_highest = sorted(set([score for name, score in myDict]))[1]
-print('\n'.join(
-    sorted([name for name, score in myDict if score == second_highest])))
