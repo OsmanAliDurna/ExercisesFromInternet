@@ -1,5 +1,5 @@
-text = """List Comprehensions"""
+text = """Find the Runner-Up Score!"""
 
 print("hackerRank" +
-text.title().replace(" ","").replace('"',"").replace("?","").replace("!","").replace("'","").replace(",","").replace(":","") +
-".py")
+      text.title().replace(" ", "").replace('"', "").replace("?", "").replace("!", "").replace("'", "").replace(",", "").replace(":", "") +
+      ".py")
