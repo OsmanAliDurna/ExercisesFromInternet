@@ -54,3 +54,4 @@ if __name__ == '__main__':
         name = input()
         score = float(input())
         scores.append([name, score])
+        
