@@ -42,13 +42,11 @@ Sample Output:
 [[ 7 10]
  [15 22]]
  """
-
 import numpy
 
 N = int(input())
 
-for i in range(N):
-    A = numpy.array(list(map(int, input().split())))
-    B = numpy.array(list(map(int, input().split())))
+A = numpy.array([input().split() for _ in range(N)], int)
+B = numpy.array([input().split() for _ in range(N)], int)
 
-print([numpy.dot(A, B), numpy.cross(A, B)])
+print(numpy.dot(A, B))
