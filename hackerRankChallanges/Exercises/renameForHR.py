@@ -1,4 +1,4 @@
-text = """Validating and Parsing Email Addresses"""
+text = """Lists"""
 
 print("hackerRank" +
       text.title().replace(" ", "").replace('"', "").replace("?", "").replace("!", "").replace("'", "").replace(",", "").replace(":", "") +
