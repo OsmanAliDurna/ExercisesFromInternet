@@ -1,4 +1,4 @@
-text = """Designer Door Mat"""
+text = """String Formatting"""
 
 print("hackerRank" +
       text.title().replace(" ", "").replace('"', "").replace("?", "").replace("!", "").replace("'", "").replace(",", "").replace(":", "") +
