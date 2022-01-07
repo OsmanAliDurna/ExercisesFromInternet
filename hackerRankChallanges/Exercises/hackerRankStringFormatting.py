@@ -46,7 +46,7 @@ Sample Output:
 def print_formatted(number):
     long = len((bin(number)[2:])) + 1
     for i in range(1, number + 1):
-        print(str(i).rjust(long, " "), end="")
+        print(str(i).rjust(long - 1, " "), end="")
         print(oct(i)[2:].rjust(long, " "), end="")
         print(hex(i)[2:].rjust(long, " ").upper(), end="")
         print(bin(i)[2:].rjust(long, " "))
