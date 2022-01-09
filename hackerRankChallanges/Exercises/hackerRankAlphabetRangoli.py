@@ -4,7 +4,7 @@ You are given an integer, N. Your task is to print an alphabet rangoli of size N
 
 Different sizes of alphabet rangoli are shown below:
 
-#size 3
+# size 3
 
 ----c----
 --c-b-c--
@@ -12,7 +12,7 @@ c-b-a-b-c
 --c-b-c--
 ----c----
 
-#size 5
+# size 5
 
 --------e--------
 ------e-d-e------
@@ -24,7 +24,7 @@ e-d-c-b-a-b-c-d-e
 ------e-d-e------
 --------e--------
 
-#size 10
+# size 10
 
 ------------------j------------------
 ----------------j-i-j----------------
@@ -78,14 +78,16 @@ e-d-c-b-a-b-c-d-e
 
 
 def print_rangoli(size):
-    listem = []
     for i in range(size):
-        listem.append(chr(ord("a") + size - i - 1))
-        print("-".join(listem).rjust(size * 2 - 1, "-"))
-    listem = []
-    for i in range(1, size):
-        listem.append(chr(ord("a") + i))
-        print("-".join(listem).ljust(size * 2 - 1, "-"))
+        listem = []
+        for j in range(i * 2 + 1):
+            listem.append(chr(ord("a") + size - 1 + abs(i - j) - i))
+        print("-".join(listem).center(4 * size - 3, "-"))
+    for i in range(size - 1, 0, -1):
+        listem = []
+        for j in range(i * 2 - 1):
+            listem.append(chr(ord("a") + size + abs(i - j - 1) - i))
+        print("-".join(listem).center(4 * size - 3, "-"))
 
 
 if __name__ == '__main__':
