@@ -63,6 +63,6 @@ from itertools import permutations
 text, size = input().upper().split()
 
 for i in range(len(list(permutations(str(text), int(size))))):
-    for j in range(size):
+    for j in range(int(size)):
         print(sorted(list(permutations(str(text), int(size))))[i][j], end="")
     print()
