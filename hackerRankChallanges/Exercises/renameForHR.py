@@ -1,4 +1,4 @@
-text = """Triangle Quest 2"""
+text = """Mod Divmod"""
 
 print("hackerRank" +
       text.title().replace("(", "").replace(")", "").replace(".", "").replace(" ", "").replace('"', "").replace("?", "").replace("!", "").replace("'", "").replace(",", "").replace(":", "") +
