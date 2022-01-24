@@ -1,0 +1,49 @@
+python manage.py shell  >>> #standart shell
+
+pip install django_extensions  >> #Bu paket bize ekstra kaabiliyetler kazandırıyor
+pip install ipython 
+add installed apps  in settings.py >>>>>'django_extensions',
+
+
+python manage.py shell_plus --ipython
+
+--------
+from fscohort.models import Student
+# Veri oluşturma ve database e gönderme
+s1 = Student(first_name="John", last_name="Doe", number=123) 
+s1  # Burada modelde str metodunda tanımlanan isim görünür
+s1.save()  -- Database e ekler.
+
+#create metodu save yapmadan direk DB ye ekler
+s3 = Student.objects.create(first_name="Walter", last_name="W", number=123) 
+
+
+
+Detaylı sorgular yapabilmemiz için:
+The raw() manager method can be used to perform raw SQL queries that return model instances
+for i in Student.objects.raw('select * from Student_Table'): print(i) 
+
+
+
+all_s = Student.objects.all() #QuerySet dönecek
+s1 = Student.objects.get(first_name="John") #tek bir obje çekmek için -- uniq olan bir field ile yapmalıyız
+s1
+
+f1 = Student.objects.filter(number=123) # belli özellikteki verileri olan objectleri getir (QuerySet)
+f1
+f1[0].first_name # querySet olduğu için f1.first_name olmuyor
+
+f2 = Student.objects.exclude(number=123) # 123 olmayanları getir
+f2
+
+# lookup fields
+f1 = Student.objects.filter(first_name__startswith="R") 
+f1
+print(f1.query) >> sql sorgusunu görmek için???
+
+
+f1 = Student.objects.filter(first_name__contains="o") # içinde o olanları getir
+f1
+
+
+# NOT: DB ye yapılan kayıtlar dışında bu queryler shellden çıkınca gidecek -  shellde olan shelde kalır :))
