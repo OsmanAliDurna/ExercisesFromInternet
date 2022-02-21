@@ -1,7 +1,12 @@
 from django.shortcuts import render
+from .forms import ContactForm
 
 def home(request):
-    return render(request, "home/index.html")
+    form = ContactForm()
+    context = {
+        "form": form
+    }
+    return render(request, "home/index.html", context)
 
 def about(request):
     return render(request, "home/about.html")
